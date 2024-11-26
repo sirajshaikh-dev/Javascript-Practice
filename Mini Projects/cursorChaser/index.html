@@ -13,12 +13,18 @@
         const cursor= document.querySelector(".cursor");
 
         document.addEventListener('mousemove', (e)=>{
-           // Current mouse position
-            const mouseX= e.clientX
-            const mouseY= e.clientY
-            // Updating cursor position
-        cursor.style.left=(`${mouseX}px`)
-        cursor.style.top=(`${mouseY}px`)
+        // Current mouse position
+            // const mouseX= e.clientX
+            // const mouseY= e.clientY
+
+        // Updating cursor position- for fix viewport
+            // cursor.style.left=(`${mouseX}px`)
+            // cursor.style.top=(`${mouseY}px`)
+
+        //Updating cursor position-For scrollable page
+        // make sure to change height=2000px and overflow:auto, to make page scroll
+        cursor.style.left=`${e.pageX}px`
+        cursor.style.top=`${e.pageY}px`
         })
     </script>
 </html>
